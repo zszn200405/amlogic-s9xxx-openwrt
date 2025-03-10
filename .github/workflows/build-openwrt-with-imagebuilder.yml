@@ -23,7 +23,7 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "s905l3b"
         type: choice
         options:
           - all
@@ -178,7 +178,7 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "6.1.y_6.12.y"
+        default: "6.12.y"
         type: choice
         options:
           - 5.4.y
@@ -222,7 +222,7 @@ on:
         options:
           - ophub
           - angel
-          - yourname
+          - zszn
 
 env:
   TZ: America/New_York
