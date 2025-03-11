@@ -12,7 +12,7 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "official"
+        default: "lede"
         type: choice
         options:
           - official
@@ -21,7 +21,7 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "s905l3b"
         type: choice
         options:
           - all
@@ -176,7 +176,7 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "6.1.y_6.12.y"
+        default: "6.12.y"
         type: choice
         options:
           - 5.4.y
@@ -223,7 +223,7 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "ophub"
+        default: "zszn"
         type: choice
         options:
           - ophub
@@ -361,10 +361,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             ### OpenWrt Image information
-            - Default IP: 192.168.1.1
+            - Default IP: 192.168.1.6
             - Default username: root
             - Default password: password
-            - Default WIFI name: OpenWrt
+            - Default WIFI name: zszn
             - Default WIFI password: none
             ### Install to EMMC
             - Login to OpenWrt → System → Amlogic Service → Install OpenWrt
